@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+        <div *ngIf="produto$ | async as produto">
+            {{produto.id}} - {{produto.nome}} - {{produto.categoria}} - R$ {{produto.valor}}
+        </div>
+        <div clas="row">
+          <div>
+            <img [src]='qrCode' />
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

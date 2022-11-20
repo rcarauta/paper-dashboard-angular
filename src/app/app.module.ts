@@ -12,6 +12,10 @@ import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { HttpClientModule } from "@angular/common/http";
+import { TokenService } from "./shared/token/token-store.service";
+import { AutenticationModule } from "./guard/autentication.module";
+import { TableComponent } from "./pages/table/table.component";
 
 
 @NgModule({
@@ -28,9 +32,11 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     NavbarModule,
     ToastrModule.forRoot(),
     FooterModule,
-    FixedPluginModule
+    FixedPluginModule,
+    AutenticationModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TokenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
