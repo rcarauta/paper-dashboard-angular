@@ -15,7 +15,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { HttpClientModule } from "@angular/common/http";
 import { TokenService } from "./shared/token/token-store.service";
 import { AutenticationModule } from "./guard/autentication.module";
-import { TableComponent } from "./pages/table/table.component";
+import { UserModule } from "./pages/user/user.module";
 
 
 @NgModule({
@@ -34,6 +34,7 @@ import { TableComponent } from "./pages/table/table.component";
     FooterModule,
     FixedPluginModule,
     AutenticationModule,
+    UserModule,
     HttpClientModule
   ],
   providers: [TokenService],

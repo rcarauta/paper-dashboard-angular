@@ -20,6 +20,10 @@ export const AppRoutes: Routes = [
     loadChildren: () => import('./pages/login/login.module').then(x => x.LoginModule)
   },
   {
+    path: 'user',
+    loadChildren: () => import('./pages/user/user.module').then(x => x.UserModule)
+  },
+  {
     path: '**',
     redirectTo: 'login'
   }
