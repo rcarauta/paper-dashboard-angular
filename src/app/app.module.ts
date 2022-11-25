@@ -16,6 +16,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { TokenService } from "./shared/token/token-store.service";
 import { AutenticationModule } from "./guard/autentication.module";
 import { UserModule } from "./pages/user/user.module";
+import { CarrinhoComprasModule } from "./pages/carrinho-compras/carrinho-compras.module";
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { UserModule } from "./pages/user/user.module";
     FixedPluginModule,
     AutenticationModule,
     UserModule,
+    CarrinhoComprasModule,
     HttpClientModule
   ],
   providers: [TokenService],

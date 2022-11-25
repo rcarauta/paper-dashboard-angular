@@ -24,6 +24,10 @@ export const AppRoutes: Routes = [
     loadChildren: () => import('./pages/user/user.module').then(x => x.UserModule)
   },
   {
+    path: 'carrinho-compras',
+    loadChildren: () => import('./pages/carrinho-compras/carrinho-compras.module').then(x => x.CarrinhoComprasModule)
+  }, 
+  {
     path: '**',
     redirectTo: 'login'
   }

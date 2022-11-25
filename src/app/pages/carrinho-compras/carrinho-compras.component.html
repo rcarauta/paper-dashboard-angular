@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Carrinho de Compras</h4>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class=" text-primary">
+              <th>
+                Nome
+              </th>
+              <th>
+                Quantidade
+              </th>
+              <th class="text-right">
+                Valor (R$)
+              </th>
+            </thead>
+            <tbody *ngFor="let item of listaCarrinhoCompras">
+              <tr>
+                <td>
+                  {{item.produto.nome}}
+                </td>
+                <td>
+                  {{item.quantidade}}
+                </td>
+                <td class="text-right">
+                  {{item.valor}}
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td class="text-right" colspan="3">
+                  {{valorTotal}}
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
